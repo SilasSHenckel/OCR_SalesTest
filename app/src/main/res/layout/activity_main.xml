@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Código"
+            android:gravity="center"
             android:textColor="@color/white"
             />
 
@@ -32,6 +33,7 @@
             android:layout_weight="3"
             android:layout_height="wrap_content"
             android:text="Descrição"
+            android:gravity="center"
             android:textColor="@color/white"
             />
 
@@ -82,7 +84,8 @@
         android:layout_marginStart="20dp"
         android:layout_above="@+id/btCapture"
         android:id="@+id/tvObs"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
         android:layout_height="wrap_content"
         android:textColor="@color/red"
         android:text="Obs: Os itens sem quantidade não serão adicionados ao carrinho! Confira as quantidades"
