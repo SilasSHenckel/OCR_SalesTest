@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/material_grey_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/llHeader"
+        android:paddingHorizontal="30dp"
+        android:gravity="center_vertical"
+        android:background="@color/material_grey_dark">
+
+        <TextView
+            android:id="@+id/tvProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Código"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Descrição"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:id="@+id/tvQuantity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Quantidade"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_marginStart="50dp"
+            android:id="@+id/tvUm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:text="UM"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginStart="50dp"
+            android:layout_width="60dp"
+            android:textColor="@color/white"
+            android:text="Remover"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/llHeader"
+        android:layout_above="@+id/tvObs"
+        android:layout_marginVertical="10dp"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginStart="20dp"
+        android:layout_above="@+id/btCapture"
+        android:id="@+id/tvObs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="Obs: Os itens sem quantidade não serão adicionados ao carrinho! Confira as quantidades"
+        />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Reconhecer  Itens"/>
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:elevation="100dp"
+        android:background="#5C000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:id="@+id/image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

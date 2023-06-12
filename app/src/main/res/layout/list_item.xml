@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:id="@+id/llBackground"
+    android:paddingHorizontal="30dp"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/etProduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="34901289"
+        android:hint="Produto"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:layout_marginStart="20dp"
+        android:id="@+id/tvDesc"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:text="Martelo do Thor lvl 999"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:layout_marginStart="20dp"
+        android:id="@+id/etQuantity"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade"
+        android:text="0"
+        android:inputType="number"
+        android:gravity="center"
+        android:textColor="@color/white"
+        />
+
+    <Spinner
+        android:layout_marginStart="50dp"
+        android:id="@+id/spUm"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginStart="50dp"
+        android:id="@+id/ivRemove"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_remove"
+        app:tint="@color/white" />
+
+</LinearLayout>
